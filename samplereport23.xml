@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<analysis
+	xmlns="https://jeremylong.github.io/DependencyCheck/dependency-check.2.5.xsd">
+	<scanInfo>
+		<engineVersion>7.1.1</engineVersion>
+		<dataSource>
+			<name>NVD CVE Checked</name>
+			<timestamp>2022-06-29T15:23:37</timestamp>
+		</dataSource>
+		<dataSource>
+			<name>NVD CVE Modified</name>
+			<timestamp>2022-06-29T14:00:01</timestamp>
+		</dataSource>
+		<dataSource>
+			<name>VersionCheckOn</name>
+			<timestamp>2022-06-22T09:50:30</timestamp>
+		</dataSource>
+		<analysisExceptions>
+			<exception>
+				<message>org.owasp.dependencycheck.exception.InitializationException: Unable to read yarn audit output.</message>
+				<stackTrace>
+					<trace>org.owasp.dependencycheck.analyzer.YarnAuditAnalyzer.prepareFileTypeAnalyzer(YarnAuditAnalyzer.java:175)</trace>
+					<trace>org.owasp.dependencycheck.analyzer.AbstractFileTypeAnalyzer.prepareAnalyzer(AbstractFileTypeAnalyzer.java:83)</trace>
+					<trace>org.owasp.dependencycheck.analyzer.AbstractAnalyzer.prepare(AbstractAnalyzer.java:102)</trace>
+					<trace>org.owasp.dependencycheck.Engine.initializeAnalyzer(Engine.java:802)</trace>
+					<trace>org.owasp.dependencycheck.Engine.analyzeDependencies(Engine.java:638)</trace>
+					<trace>org.owasp.dependencycheck.App.runScan(App.java:260)</trace>
+					<trace>org.owasp.dependencycheck.App.run(App.java:192)</trace>
+					<trace>org.owasp.dependencycheck.App.main(App.java:87)</trace>
+				</stackTrace>
+				<cause>
+					<message>java.io.IOException: Cannot run program &quot;yarn&quot;: error=2, No such file or directory</message>
+					<stackTrace>
+						<trace>java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)</trace>
+						<trace>java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)</trace>
+						<trace>org.owasp.dependencycheck.analyzer.YarnAuditAnalyzer.prepareFileTypeAnalyzer(YarnAuditAnalyzer.java:153)</trace>
+						<trace>org.owasp.dependencycheck.analyzer.AbstractFileTypeAnalyzer.prepareAnalyzer(AbstractFileTypeAnalyzer.java:83)</trace>
+						<trace>org.owasp.dependencycheck.analyzer.AbstractAnalyzer.prepare(AbstractAnalyzer.java:102)</trace>
+						<trace>org.owasp.dependencycheck.Engine.initializeAnalyzer(Engine.java:802)</trace>
+						<trace>org.owasp.dependencycheck.Engine.analyzeDependencies(Engine.java:638)</trace>
+						<trace>org.owasp.dependencycheck.App.runScan(App.java:260)</trace>
+						<trace>org.owasp.dependencycheck.App.run(App.java:192)</trace>
+						<trace>org.owasp.dependencycheck.App.main(App.java:87)</trace>
+					</stackTrace>
+					<cause>
+						<message>java.io.IOException: error=2, No such file or directory</message>
+						<stackTrace>
+							<trace>java.base/java.lang.ProcessImpl.forkAndExec(Native Method)</trace>
+							<trace>java.base/java.lang.ProcessImpl.&lt;init&gt;(ProcessImpl.java:340)</trace>
+							<trace>java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)</trace>
+							<trace>java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)</trace>
+							<trace>java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)</trace>
+							<trace>org.owasp.dependencycheck.analyzer.YarnAuditAnalyzer.prepareFileTypeAnalyzer(YarnAuditAnalyzer.java:153)</trace>
+							<trace>org.owasp.dependencycheck.analyzer.AbstractFileTypeAnalyzer.prepareAnalyzer(AbstractFileTypeAnalyzer.java:83)</trace>
+							<trace>org.owasp.dependencycheck.analyzer.AbstractAnalyzer.prepare(AbstractAnalyzer.java:102)</trace>
+							<trace>org.owasp.dependencycheck.Engine.initializeAnalyzer(Engine.java:802)</trace>
+							<trace>org.owasp.dependencycheck.Engine.analyzeDependencies(Engine.java:638)</trace>
+							<trace>org.owasp.dependencycheck.App.runScan(App.java:260)</trace>
+							<trace>org.owasp.dependencycheck.App.run(App.java:192)</trace>
+							<trace>org.owasp.dependencycheck.App.main(App.java:87)</trace>
+						</stackTrace>
+					</cause>
+				</cause>
+			</exception>
+		</analysisExceptions>
+	</scanInfo>
+	<projectInfo>
+		<name>CI_microservices #32</name>
+		<reportDate>2022-06-29T15:28:22.867549Z</reportDate>
+		<credits>This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov, NPM Public Advisories: https://www.npmjs.com/advisories, and the RetireJS community.</credits>
+	</projectInfo>
+	<dependencies>
+		<dependency isVirtual="false">
+			<fileName>$data.js</fileName>
+			<filePath>/var/lib/jenkins/workspace/CI_microservices/gateway/node/node_modules/npm/node_modules/ajv/lib/$data.js</filePath>
+			<md5>5a4ed24a64e1b830f7187510711fca0c</md5>
+			<sha1>5f17432e27da3807ae81e22675f57e3ebb8b7c0e</sha1>
+			<sha256>e0f50b837e6a182f96733ab1f20ca296235217761159f1cd453559bf6b0c9874</sha256>
+			<evidenceCollected></evidenceCollected>
+		</dependency>
+		<dependency isVirtual="false">
+			<fileName>-internal.js</fileName>
+			<filePath>/var/lib/jenkins/workspace/CI_microservices/gateway/node_modules/rsvp/lib/rsvp/-internal.js</filePath>
+			<md5>92e3c7e44b95e1e09d8a74df6fbae2ff</md5>
+			<sha1>92a5a32d969a101fec4562c57f0b752ffec43eb0</sha1>
+			<sha256>bb71d37f54b47a7b098f911dc0dceba90e9a7d1890876829d584236ca4f6b94d</sha256>
+			<evidenceCollected></evidenceCollected>
+		</dependency>
+		<dependency isVirtual="true">
+			<fileName>@ampproject/remapping:2.2.0</fileName>
+			<filePath>/var/lib/jenkins/workspace/CI_microservices/gateway/package-lock.json?/@ampproject/remapping:2.2.0</filePath>
+			<md5></md5>
+			<sha1></sha1>
+			<sha256></sha256>
+			<description>Remap sequential sourcemaps through transformations to point at the original source code</description>
+			<license>Apache-2.0</license>
+			<projectReferences>
+				<projectReference>hospital-management:0.0.1-SNAPSHOT</projectReference>
+			</projectReferences>
+			<evidenceCollected>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>author.email</name>
+					<value>jridgewell@google.com</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>author.name</name>
+					<value>Justin Ridgewell</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>bugs.url</name>
+					<value>https://github.com/ampproject/remapping/issues</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>description</name>
+					<value>Remap sequential sourcemaps through transformations to point at the original source code</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>homepage</name>
+					<value>https://github.com/ampproject/remapping#readme</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>name</name>
+					<value>@ampproject/remapping</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>name</name>
+					<value>@ampproject/remapping_project</value>
+				</evidence>
+				<evidence type="product" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>name</name>
+					<value>@ampproject/remapping</value>
+				</evidence>
+				<evidence type="version" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>version</name>
+					<value>2.2.0</value>
+				</evidence>
+			</evidenceCollected>
+			<identifiers>
+				<package confidence="HIGHEST">
+					<id>pkg:npm/%40ampproject%2Fremapping@2.2.0</id>
+					<url>https://ossindex.sonatype.org/component/pkg:npm/%40ampproject%2Fremapping@2.2.0?utm_source=dependency-check&amp;utm_medium=integration&amp;utm_content=7.1.1</url>
+				</package>
+			</identifiers>
+		</dependency>
+	</dependencies>
+</analysis>

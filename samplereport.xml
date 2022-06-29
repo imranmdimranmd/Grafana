@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<analysis
+	xmlns="https://jeremylong.github.io/DependencyCheck/dependency-check.2.5.xsd">
+	<scanInfo>
+		<engineVersion>7.1.1</engineVersion>
+		<dataSource>
+			<name>NVD CVE Checked</name>
+			<timestamp>2022-06-29T15:23:37</timestamp>
+		</dataSource>
+		<dataSource>
+			<name>NVD CVE Modified</name>
+			<timestamp>2022-06-29T14:00:01</timestamp>
+		</dataSource>
+		<dataSource>
+			<name>VersionCheckOn</name>
+			<timestamp>2022-06-22T09:50:30</timestamp>
+		</dataSource>
+		<analysisExceptions>
+			<exception>
+				<message>org.owasp.dependencycheck.exception.InitializationException: Unable to read yarn audit output.</message>
+				<stackTrace>
+					<trace>org.owasp.dependencycheck.analyzer.YarnAuditAnalyzer.prepareFileTypeAnalyzer(YarnAuditAnalyzer.java:175)</trace>
+					<trace>org.owasp.dependencycheck.analyzer.AbstractFileTypeAnalyzer.prepareAnalyzer(AbstractFileTypeAnalyzer.java:83)</trace>
+					<trace>org.owasp.dependencycheck.analyzer.AbstractAnalyzer.prepare(AbstractAnalyzer.java:102)</trace>
+					<trace>org.owasp.dependencycheck.Engine.initializeAnalyzer(Engine.java:802)</trace>
+					<trace>org.owasp.dependencycheck.Engine.analyzeDependencies(Engine.java:638)</trace>
+					<trace>org.owasp.dependencycheck.App.runScan(App.java:260)</trace>
+					<trace>org.owasp.dependencycheck.App.run(App.java:192)</trace>
+					<trace>org.owasp.dependencycheck.App.main(App.java:87)</trace>
+				</stackTrace>
+				<cause>
+					<message>java.io.IOException: Cannot run program &quot;yarn&quot;: error=2, No such file or directory</message>
+					<stackTrace>
+						<trace>java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)</trace>
+						<trace>java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)</trace>
+						<trace>org.owasp.dependencycheck.analyzer.YarnAuditAnalyzer.prepareFileTypeAnalyzer(YarnAuditAnalyzer.java:153)</trace>
+						<trace>org.owasp.dependencycheck.analyzer.AbstractFileTypeAnalyzer.prepareAnalyzer(AbstractFileTypeAnalyzer.java:83)</trace>
+						<trace>org.owasp.dependencycheck.analyzer.AbstractAnalyzer.prepare(AbstractAnalyzer.java:102)</trace>
+						<trace>org.owasp.dependencycheck.Engine.initializeAnalyzer(Engine.java:802)</trace>
+						<trace>org.owasp.dependencycheck.Engine.analyzeDependencies(Engine.java:638)</trace>
+						<trace>org.owasp.dependencycheck.App.runScan(App.java:260)</trace>
+						<trace>org.owasp.dependencycheck.App.run(App.java:192)</trace>
+						<trace>org.owasp.dependencycheck.App.main(App.java:87)</trace>
+					</stackTrace>
+					<cause>
+						<message>java.io.IOException: error=2, No such file or directory</message>
+						<stackTrace>
+							<trace>java.base/java.lang.ProcessImpl.forkAndExec(Native Method)</trace>
+							<trace>java.base/java.lang.ProcessImpl.&lt;init&gt;(ProcessImpl.java:340)</trace>
+							<trace>java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)</trace>
+							<trace>java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)</trace>
+							<trace>java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)</trace>
+							<trace>org.owasp.dependencycheck.analyzer.YarnAuditAnalyzer.prepareFileTypeAnalyzer(YarnAuditAnalyzer.java:153)</trace>
+							<trace>org.owasp.dependencycheck.analyzer.AbstractFileTypeAnalyzer.prepareAnalyzer(AbstractFileTypeAnalyzer.java:83)</trace>
+							<trace>org.owasp.dependencycheck.analyzer.AbstractAnalyzer.prepare(AbstractAnalyzer.java:102)</trace>
+							<trace>org.owasp.dependencycheck.Engine.initializeAnalyzer(Engine.java:802)</trace>
+							<trace>org.owasp.dependencycheck.Engine.analyzeDependencies(Engine.java:638)</trace>
+							<trace>org.owasp.dependencycheck.App.runScan(App.java:260)</trace>
+							<trace>org.owasp.dependencycheck.App.run(App.java:192)</trace>
+							<trace>org.owasp.dependencycheck.App.main(App.java:87)</trace>
+						</stackTrace>
+					</cause>
+				</cause>
+			</exception>
+		</analysisExceptions>
+	</scanInfo>
+	<projectInfo>
+		<name>CI_microservices #32</name>
+		<reportDate>2022-06-29T15:28:22.867549Z</reportDate>
+		<credits>This report contains data retrieved from the National Vulnerability Database: https://nvd.nist.gov, NPM Public Advisories: https://www.npmjs.com/advisories, and the RetireJS community.</credits>
+	</projectInfo>
+	<dependencies>
+		<dependency isVirtual="false">
+			<fileName>$data.js</fileName>
+			<filePath>/var/lib/jenkins/workspace/CI_microservices/gateway/node/node_modules/npm/node_modules/ajv/lib/$data.js</filePath>
+			<md5>5a4ed24a64e1b830f7187510711fca0c</md5>
+			<sha1>5f17432e27da3807ae81e22675f57e3ebb8b7c0e</sha1>
+			<sha256>e0f50b837e6a182f96733ab1f20ca296235217761159f1cd453559bf6b0c9874</sha256>
+			<evidenceCollected></evidenceCollected>
+		</dependency>
+	</dependencies>
+</analysis>
